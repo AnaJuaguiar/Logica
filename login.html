@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+    
+    var tentativa = 1
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+        alert("Bem-vindo ao sistema " + loginInformado);
+	}else {
+		
+        while(tentativa <= 3) {
+    		alert("Login inválido. Tente novamente");
+
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
+            
+            tentativa = tentativa + 1 ;
+    	}
+    }
+
+    if(tentativa>=3){
+    	alert("Verifique seu e-mail, mandamos uma redefinição de senha.");
+    }
+    
+</script>
